@@ -1,1 +1,15 @@
-
+#João Victor de Jesus Augusto
+{% extends "base.html" %}
+{% block content %}
+<h2>Cadastro</h2>
+<form method="POST" action="/cadastro">
+    <input type="text" name="username" placeholder="Nome de usuário" required>
+    <input type="password" name="password" placeholder="Senha" required>
+    <input type="url" name="photo_url" placeholder="URL da foto de perfil">
+    <textarea name="bio" placeholder="Escreva uma breve bio sobre você..." rows="3"></textarea>
+    <label>
+        <input type="checkbox" name="remember"> Manter-me conectado
+    </label>
+    <button type="submit" class="btn">Cadastrar</button>
+</form>
+{% endblock %}
